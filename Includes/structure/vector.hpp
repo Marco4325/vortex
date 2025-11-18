@@ -41,5 +41,5 @@ namespace vtx{
 
 }
 
-#include "..\..\Concretes\structure\vector\_vector.tpp"
-#include "..\..\Concretes\structure\vector\vector.tpp"
+#include "../../Concretes/structure/vector/_vector.tpp"
+#include "../../Concretes/structure/vector/vector.tpp"

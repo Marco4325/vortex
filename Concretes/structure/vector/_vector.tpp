@@ -1,4 +1,4 @@
-#include "..\..\..\Includes\structure\vector.hpp"
+#include "../../../Includes/structure/vector.hpp"
 #include <algorithm>
 
 namespace vtx{
@@ -10,7 +10,7 @@ namespace vtx{
             this->array_max_size = _array.size();
             this->array = new T[array_max_size];
             int counter = 0;
-            for( T element : _array.size() )
+            for( T element : _array )
                 this->array[counter++] = element;
 
         }
