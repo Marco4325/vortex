@@ -14,6 +14,7 @@ namespace vtx{
                 T* array;
                 int array_size, 
                     array_max_size;
+                void redimension();
                 
             public:
                 // CONSTRUCTORS AND DESTRUCTOR
@@ -25,7 +26,6 @@ namespace vtx{
                 CAN_USE_BRACKETS_FOR_READING_MACRO;
 
                 // FUNCTIONS
-                void redimension();
 
                 int size();
 
@@ -33,8 +33,11 @@ namespace vtx{
                 void pop();
 
                 void remove_at( int _pos );
+                void remove_range_at( int _start, int _end);
                 void insert_at( int _pos, T _element );
                 void insert_array_at( int _pos, T* _array, int _array_size );
+        
+                void clear();
         };
 
     }

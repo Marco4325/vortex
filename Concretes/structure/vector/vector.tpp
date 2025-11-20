@@ -88,10 +88,27 @@ namespace vtx{
             this->array_size--;
         }
 
+        template<typename T>
+        void vector<T>::remove_range_at( int _start, int _end ){
+            int quantity_at_range = (_end - _start) + 1;
+        
+            for( int i = _end; i < this->size(); i++ ){
+                
+            }
+        }
+
         // SIZE
         template<typename T>
         int vector<T>::size(){
             return this->array_size;
+        }
+
+        template<typename T>
+        void vector<T>::clear(){
+            delete[] this->array;
+            this->array = nullptr;
+            this->array_size = 0;
+            this->array_max_size = 0;
         }
 
     }

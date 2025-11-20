@@ -40,7 +40,7 @@ namespace vtx{
 
         template<typename T>
         vector<T>::~vector(){
-            delete[] this->array;
+            this->clear();
         }
         
     }
