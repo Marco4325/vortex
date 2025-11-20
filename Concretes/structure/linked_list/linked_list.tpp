@@ -153,16 +153,5 @@ namespace vtx{
             this->list_size--;
         }
 
-        template<typename T>
-        void linked_list<T>::print_list(){
-            node<T>* aux_node = this->head;
-            std::cout << "List: ";
-            while(aux_node){
-                std::cout << aux_node->element << " ";
-                aux_node = aux_node->next_node;
-            }
-            std::cout << "\n\n";
-        }
-
     }
 }

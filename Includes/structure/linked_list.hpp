@@ -1,6 +1,17 @@
 #pragma once
 
 namespace vtx{
+
+    namespace structure{
+        template<typename T>
+        class linked_list;
+    }
+
+    namespace utils{
+        template<typename U>
+        void print_sequence( vtx::structure::linked_list<U>*& _list );
+    }
+
     namespace structure{
 
         template<typename T>
@@ -34,8 +45,10 @@ namespace vtx{
                 //void push_front_array(T* _array); TODO
 
                 int size();
-                void print_list();
                 void clear();
+
+                template<typename U>
+                friend void vtx::utils::print_sequence( vtx::structure::linked_list<U>*& _list );
         };
 
     }
