@@ -2,9 +2,7 @@
 #include <iostream>
 
 namespace vtx{
-    
-    namespace structure{
-        
+ 
         template<typename T>
         linked_list<T>::linked_list(){
             this->head = nullptr;
@@ -153,5 +151,4 @@ namespace vtx{
             this->list_size--;
         }
 
-    }
 }

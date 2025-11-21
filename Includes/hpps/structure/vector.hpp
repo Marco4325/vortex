@@ -1,12 +1,12 @@
 #pragma once
 
 #include <initializer_list>
+#include <stdexcept>
 
-#define CAN_USE_BRACKETS_FOR_READING_MACRO int operator[](int _index) { if (_index >= 0 && _index < this->array_size) { return this->array[_index]; } return -1; }
+#define CAN_USE_BRACKETS_FOR_READING_MACRO T& operator[](int _index) { if (_index >= 0 && _index < this->array_size) { return this->array[_index]; } return -1; }
+#define CAN_USE_BRACKETS_FOR_READING_CONST_MACRO const T& operator[](int _index) const { if (_index >= 0 && _index < this->array_size) { return this->array[_index]; } throw std::range_error("ERROR: Accessing invalid memory."); }
 
 namespace vtx{
-
-    namespace structure{
  
         template<typename T>
         class vector{
@@ -24,10 +24,10 @@ namespace vtx{
                 vector();
                 ~vector();
                 CAN_USE_BRACKETS_FOR_READING_MACRO;
-
+                CAN_USE_BRACKETS_FOR_READING_CONST_MACRO;
                 // FUNCTIONS
 
-                int size();
+                int size() const;
 
                 void push( T _element );
                 void pop();
@@ -39,8 +39,6 @@ namespace vtx{
         
                 void clear();
         };
-
-    }
 
 }
 

@@ -3,7 +3,6 @@
 
 namespace vtx{
 
-    namespace structure{
         template<typename T>
         vector<T>::vector( std::initializer_list<T> _array ){
             this->array_size = _array.size();
@@ -43,5 +42,4 @@ namespace vtx{
             this->clear();
         }
         
-    }
 }

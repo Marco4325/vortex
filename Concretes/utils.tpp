@@ -2,7 +2,7 @@
 #include <iostream>
 
 template<typename T>
-void vtx::utils::print_sequence( const vtx::structure::vector<T>& _vector ){
+void vtx::print_sequence( const vtx::vector<T>& _vector ){
     std::cout << "\nVector: ";
     for(int i = 0; i < _vector.size(); i++){
         std::cout << _vector[i];
@@ -12,7 +12,7 @@ void vtx::utils::print_sequence( const vtx::structure::vector<T>& _vector ){
 }
 
 template<typename U>
-void vtx::utils::print_sequence( const vtx::structure::linked_list<U>& _list ){
+void vtx::print_sequence( const vtx::linked_list<U>& _list ){
     auto* aux_node = _list.head;
     
     int counter = 0;

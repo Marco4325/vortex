@@ -2,21 +2,9 @@
 
 namespace vtx{
 
-    namespace structure{
-        template<typename T>
-        class linked_list;
-    }
-
-    namespace utils{
-        template<typename U>
-        void print_sequence( vtx::structure::linked_list<U>*& _list );
-    }
-
-    namespace structure{
-
         template<typename T>
         class linked_list{
-            
+
             private:
             class node{
                 public:
@@ -48,10 +36,8 @@ namespace vtx{
                 void clear();
 
                 template<typename U>
-                friend void vtx::utils::print_sequence( const vtx::structure::linked_list<U>& _list );    
+                friend void print_sequence( const linked_list<U>& _list );    
         };
-
-    }
 }
 
 #include "../../../Concretes/structure/linked_list/linked_list.tpp"

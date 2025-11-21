@@ -5,15 +5,11 @@
 
 namespace vtx{
 
-    namespace utils{
+    template<typename T>
+    void print_sequence( const vtx::vector<T>& _vector );
 
-        template<typename T>
-        void print_sequence( const vtx::structure::vector<T>& _vector );
-
-        template<typename U>
-        void print_sequence( const vtx::structure::linked_list<U>& _list );
-        
-    }
+    template<typename U>
+    void print_sequence( const vtx::linked_list<U>& _list );
 
 }
 

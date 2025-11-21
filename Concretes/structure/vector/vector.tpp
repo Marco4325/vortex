@@ -2,7 +2,6 @@
 #include <iostream>
 
 namespace vtx{
-    namespace structure{
 
         // REDIMENSION VECTOR
         template<typename T>
@@ -99,7 +98,7 @@ namespace vtx{
 
         // SIZE
         template<typename T>
-        int vector<T>::size(){
+        int vector<T>::size() const{
             return this->array_size;
         }
 
@@ -111,5 +110,4 @@ namespace vtx{
             this->array_max_size = 0;
         }
 
-    }
 }
