@@ -90,11 +90,11 @@ namespace vtx{
 
         template<typename T>
         void vector<T>::remove_range_at( int _start, int _end ){
-            int quantity_at_range = (_end - _start) + 1;
-        
-            for( int i = _end; i < this->size(); i++ ){
-                
-            }
+
+            for(int i = _end + 1; i < this->array_size; i++)
+                this->array[(i - _start - 1 )] = this->array[i];
+            
+            this->array_size -= (_end - _start) + 1;
         }
 
         // SIZE
