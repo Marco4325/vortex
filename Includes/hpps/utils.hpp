@@ -8,10 +8,10 @@ namespace vtx{
     namespace utils{
 
         template<typename T>
-        void print_sequence( vtx::structure::vector<T>& _vector );
+        void print_sequence( const vtx::structure::vector<T>& _vector );
 
         template<typename U>
-        void print_sequence( vtx::structure::linked_list<U>*& _list );
+        void print_sequence( const vtx::structure::linked_list<U>& _list );
         
     }
 

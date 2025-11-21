@@ -19,9 +19,9 @@ namespace vtx{
         
         template<typename T>
         void linked_list<T>::clear(){
-            node<T>* aux_node = this->head;
+            node* aux_node = this->head;
             while(aux_node){
-                node<T>* next_node = aux_node->next_node;
+                node* next_node = aux_node->next_node;
                 delete aux_node;
                 aux_node = next_node;
             }
@@ -39,7 +39,7 @@ namespace vtx{
         template<typename T>
         void linked_list<T>::push_back(T _element){
 
-            node<T>* new_node = new node<T>;
+            node* new_node = new node;
             new_node->element = _element;
 
             if(this->head == nullptr){
@@ -57,7 +57,7 @@ namespace vtx{
         template<typename T>
         void linked_list<T>::push_front(T _element){
 
-            node<T>* new_node = new node<T>;
+            node* new_node = new node;
             new_node->element = _element;
 
             if(this->head == nullptr){
@@ -75,7 +75,7 @@ namespace vtx{
         template<typename T>
         void linked_list<T>::pop_back(){
         if(this->list_size == 0) return;
-            node<T>* aux = this->head;
+            node* aux = this->head;
             
             if(this->list_size == 1){
                 delete aux;
@@ -98,7 +98,7 @@ namespace vtx{
         void linked_list<T>::pop_front(){
             if(this->head == nullptr) return;
 
-            node<T>* temporary_node = this->head;
+            node* temporary_node = this->head;
             this->head = this->head->next_node;
             delete temporary_node;
 
@@ -108,7 +108,7 @@ namespace vtx{
         template<typename T>
         void linked_list<T>::insert_at(int _pos, T _element){
         if(_pos < 0 || _pos > this->list_size) return;
-            node<T>* new_node = new node<T>, *aux = this->head;
+            node* new_node = new node, *aux = this->head;
             new_node->element = _element;
 
             if( _pos == 0 ){
@@ -132,7 +132,7 @@ namespace vtx{
         template<typename T>
         void linked_list<T>::remove_at(int _pos){
         if(_pos < 0 || _pos >= this->list_size) return;
-            node<T>* aux = this->head;
+            node* aux = this->head;
 
             if( _pos == 0 ){
                 this->pop_front();
@@ -147,7 +147,7 @@ namespace vtx{
             for(int i = 0; i < (_pos - 1); i++)
                 aux = aux->next_node;
             
-            node<T>* temporary_node = aux->next_node;
+            node* temporary_node = aux->next_node;
             aux->next_node = aux->next_node->next_node;
             delete temporary_node;
             this->list_size--;

@@ -15,19 +15,19 @@ namespace vtx{
     namespace structure{
 
         template<typename T>
-        class node{
-            public:
-                T element;
-                node* next_node;      
-        };
-
-        template<typename T>
         class linked_list{
+            
             private:
-                node<T>* head;
-                node<T>* tail;
-                int list_size;
-
+            class node{
+                public:
+                    T element;
+                    node* next_node;      
+            };
+            
+            node* head;
+            node* tail;
+            int list_size;
+            
             public:
                 linked_list();
                 ~linked_list();
@@ -48,7 +48,7 @@ namespace vtx{
                 void clear();
 
                 template<typename U>
-                friend void vtx::utils::print_sequence( vtx::structure::linked_list<U>*& _list );
+                friend void vtx::utils::print_sequence( const vtx::structure::linked_list<U>& _list );    
         };
 
     }
