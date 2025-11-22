@@ -4,6 +4,15 @@
 namespace vtx{
  
         template<typename T>
+        linked_list<T>::linked_list( std::initializer_list<T> _array ){
+            this->head = nullptr;
+            this->tail = nullptr;
+            this->list_size = 0;
+            for(T element : _array)
+                this->push_back(element);
+        }
+
+        template<typename T>
         linked_list<T>::linked_list(){
             this->head = nullptr;
             this->tail = nullptr;
